@@ -1,6 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300|Roboto);
 
+a:link {
+  color: #6FC97C;
+}
 
+a:visited {
+  color: #6FC97C;
+}
 
 a:hover {
   color: #ddd;
@@ -24,6 +30,10 @@ nav {
   background: #444;
   color: white;
   margin-bottom: 50px;
+}
+
+nav a:link {
+  text-decoration: none;
 }
 
 .item {
