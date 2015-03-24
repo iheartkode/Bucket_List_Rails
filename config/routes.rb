@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :items
-  get 'items#admin'
   root 'items#index'
 end

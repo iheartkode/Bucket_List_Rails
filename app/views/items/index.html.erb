@@ -2,9 +2,10 @@
   <div class="item">
     <p class="item_content"><%=  item.item %></p>
   <p class="item_date">Created <%= time_ago_in_words(item.created_at) %> ago</p>
+  </div>
 <% end.empty? %>
   <p>
     No Items found, <%= link_to 'New Item', new_item_path %>
   </p>
 <% end %>
-</div>
+

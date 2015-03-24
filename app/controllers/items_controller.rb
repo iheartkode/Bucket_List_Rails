@@ -1,12 +1,14 @@
 class ItemsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :find_item, only:  [:show, :edit, :update, :destroy]
   def index
-    @items = Item.order('items.created_at DESC')
+    @items = Item.where(user_id: current_user)
+    # order('items.created_at DESC')
 
   end
 
   def admin
-    
+
 
   end
 
@@ -15,11 +17,11 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @items = Item.new
+    @item = current_user.items.build
   end
 
   def create
-    @item = Item.new(item_params)
+    @item = current_user.items.build(item_params)
     if @item.save
       redirect_to @item
     else
