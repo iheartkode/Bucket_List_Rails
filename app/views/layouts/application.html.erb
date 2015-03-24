@@ -8,20 +8,23 @@
 </head>
 <body>
   <nav>
+  <div class="login">
   <% if user_signed_in? %>
-
   Logged in as <strong><%= current_user.email %></strong>.
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-   <%= link_to "New Item", new_item_path %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
-
+</div>
     <h1><%= link_to "Bucket Listr", root_path %></h1>
+  <% if user_signed_in? %>
+    <%= link_to "New Item", new_item_path %>
+  <% end %>
   </nav>
-  <div class="container">
+
+  <div class="container"><br>
  <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
 <% end %>
