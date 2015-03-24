@@ -1,0 +1,56 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300|Roboto);
+
+a:visited {
+  color: white;
+  background: #333;
+
+}
+
+a:hover {
+  color: #ddd;
+}
+
+
+h1 {
+  color: rgba(89,230,110,1);
+  font-family: 'Oswald', sans-serif;
+}
+
+.container {
+  width: 990px;
+  margin: 0 auto;
+}
+
+nav {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  background: #444;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.item {
+  width: 500px;
+  background: #eee;
+  height: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
+-moz-box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
+box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
+
+}
+.item_date {
+  font-family: 'Roboto', sans-serif;
+  color: #aaa;
+  text-align: right;
+  margin-right: 20px;
+}
+.item_content {
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 32px;
+  color: #333;
+}
