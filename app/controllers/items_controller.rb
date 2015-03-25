@@ -7,6 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    
   end
 
   def new
@@ -17,7 +18,6 @@ class ItemsController < ApplicationController
     @item = current_user.items.build(item_params)
     if @item.save
       redirect_to root_path
-      flash[:success] = "Item was successfully created."
     else
       render 'new'
     end
@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    flash[:success] = "Item was deleted"
+    flash[:success] = "User deleted"
     redirect_to root_path
   end
 
