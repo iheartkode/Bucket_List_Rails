@@ -1,5 +1,7 @@
 <%= form_for(@item) do |f| %>
+   <div class="ui-widget">
    <%= f.text_field :item, autofocus: true, :required => true %>
    <%= f.submit %>
+</div>
 
 <% end %>

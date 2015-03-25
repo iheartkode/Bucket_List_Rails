@@ -20,7 +20,9 @@
     </div>
     <h1><%= link_to "Bucket Listr", root_path %></h1>
     <% if user_signed_in? %>
-      <%= link_to "New Item", new_item_path %>
+    <div id="new_item_nav">
+    <%= link_to "New Item", new_item_path %>
+    </div>
     <% end %>
   </nav>
   <div class="container"><br>
@@ -37,6 +39,7 @@
   <% end %>
     </p>
 <br>
+  
   <%= yield %>
 
   </div>

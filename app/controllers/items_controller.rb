@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :find_item, only:  [:show, :edit, :update, :destroy]
 
   def index
-    @item = Item.where(user_id: current_user).order('items.created_at DESC')
+    @item = Item.where(user_id: current_user).order('items.created_at DESC').paginate(:page => params[:page], :per_page => 10)
   end
 
   def show
@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    flash[:success] = "User deleted"
+    flash[:success] = "Item deleted"
     redirect_to root_path
   end
 
