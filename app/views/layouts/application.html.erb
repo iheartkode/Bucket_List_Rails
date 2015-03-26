@@ -20,25 +20,19 @@
     </div>
     <h1><%= link_to "Bucket Listr", root_path %></h1>
     <% if user_signed_in? %>
-    <div id="new_item_nav">
-    <%= link_to "New Item", new_item_path %>
-    </div>
+      <div id="new_item_nav">
+      <%= link_to "New Item", new_item_path %>
+      </div>
     <% end %>
   </nav>
-  <div class="container"><br>
-   <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-   <% end %>
-  <% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-  <% end %>
+  <div class="container">
 
-  <p class="notice">
+  <span class="notice">
   <% flash.each do |key, value| %>
       <%= value %>
   <% end %>
-    </p>
-<br>
+  </span>
+
   
   <%= yield %>
 

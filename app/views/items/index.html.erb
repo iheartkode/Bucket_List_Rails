@@ -1,4 +1,5 @@
-<% if @item.each do |item| %>
+<h1>Your Personal Bucket List:</h1>
+ <% if @item.each do |item| %>
   <div class="item">
     <p class="item_content"><%=  item.item %></p>
   <p class="item_date">Created <%= time_ago_in_words(item.created_at) %> ago</p>
