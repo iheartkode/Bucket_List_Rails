@@ -1,3 +1,4 @@
+<h1>Your Private Bucket List:</h1>
 <% if @item.each do |item| %>
   <div class="item">
     <p class="item_content"><%=  item.item %></p>
@@ -8,7 +9,7 @@
   </div>
   </div>
 <% end.empty? %>
- 
+
   <p>
     No Items found..
   </p>
