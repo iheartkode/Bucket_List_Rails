@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    
+
   end
 
   def new
@@ -17,6 +17,7 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.build(item_params)
     if @item.save
+       flash[:success] = "Item was successfully created"
       redirect_to root_path
     else
       render 'new'
@@ -30,6 +31,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update(item_params)
+     flash[:success] = "Item was successfully updated"
     redirect_to root_path
   end
 
