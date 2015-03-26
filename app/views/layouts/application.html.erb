@@ -38,10 +38,16 @@
       <%= value %>
   <% end %>
     </p>
-
-
-  <%= yield %>
-
+  <% if user_signed_in? %>
+  <% else %>
+  <h1>What do you want to do before you die?</h1>
+   <p class="intro">
+     Bucket Listr: is an app that allows you to create a list of things
+     <br>that you would like to do before you die. <br><br>
+     Simply sign up with your email (no verification needed), and get started today!
+   </p>
+   <% end %>
+   <%= yield %>
   </div>
 </body>
 </html>
