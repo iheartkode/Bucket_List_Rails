@@ -1,4 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300|Roboto);
+@media only screen and (max-width : 320px) {
+  .container {
+    max-width: 320px;
+    padding: 10px;
+  }
+
+  .item {
+    max-width: 250px;
+  }
+}
+@import url(https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300|Roboto);
 
 .admin {
   text-align: right;
@@ -50,23 +60,22 @@ nav a:link {
 }
 
 .item {
-  width: 500px;
-  background: #ddd;
-  height: auto;
+  max-width: 400px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
   margin-bottom: 20px;
   padding: 10px;
-  border-radius: 20px;
-  -webkit-box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
-  -moz-box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
-  box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
-
+  // -webkit-box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
+  // -moz-box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
+  // box-shadow: 1px 1px 9px 1px rgba(89,230,110,1);
 }
 .item_date {
   font-family: 'Roboto', sans-serif;
   color: #aaa;
   text-align: right;
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 16px;
+  font-style: italic;
 }
 .item_content {
   text-align: center;

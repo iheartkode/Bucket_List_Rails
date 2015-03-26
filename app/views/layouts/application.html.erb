@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>BucketListr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -44,7 +45,7 @@
    <p class="intro">
      Bucket Listr: is an app that allows you to create a list of things
      <br>that you would like to do before you die. <br><br>
-     Simply sign up with your email (no verification needed), and get started today!
+     Simply <%= link_to "sign up", new_user_registration_path, :class => 'navbar-link'  %> with your email (no verification needed), and get started today!
    </p>
    <% end %>
    <%= yield %>
