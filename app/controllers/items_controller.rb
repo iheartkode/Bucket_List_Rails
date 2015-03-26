@@ -17,7 +17,6 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.build(item_params)
     if @item.save
-      flash[:notice] = "Item successfully created"
       redirect_to root_path
     else
       render 'new'

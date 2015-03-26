@@ -1,3 +1,4 @@
 $(document).ready ->
-  $('.notice').effect 'pulsate', { times: 5 }, 500
+  $('#new_item_nav').effect 'bounce', { times: 4 }, 500
+  $ ->
   return
