@@ -37,7 +37,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
-    flash[:success] = "Item deleted"
+    flash[:success] = "The item was successfully deleted"
     redirect_to root_path
   end
 
