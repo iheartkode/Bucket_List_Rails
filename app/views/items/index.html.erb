@@ -4,7 +4,7 @@
     <p class="item_content"><%=  item.item %></p>
   <p class="item_date">Created <%= time_ago_in_words(item.created_at) %> ago</p>
   <div class="admin">
-  <%= link_to "Edit", edit_item_path(item) %>
+    <%= link_to "Edit", edit_item_path(item) %>
   <%= link_to "Delete",  item_path(item) , method:  :delete, data: { confirm: "Are you sure?" }%>
   </div>
   </div>
