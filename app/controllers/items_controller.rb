@@ -47,6 +47,6 @@ private
   end
 
   def item_params
-  params.require(:item).permit(:item)
+  params.require(:item).permit(:item, :done)
   end
 end

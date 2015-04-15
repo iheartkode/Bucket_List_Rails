@@ -1,7 +1,15 @@
 <h1>Your Private Bucket List:</h1>
 <% if @item.each do |item| %>
   <div class="item">
-    <p class="item_content"><%=  item.item %></p>
+  
+  <p class="item_content"><%=  item.item %></p>
+
+  <% if item.done == 1 %>
+    <p style="text-align: center; color: green; font-size: 18px;">
+      Congratulations you have done this!
+    </p>
+  <% end %>
+
   <p class="item_date">Created <%= time_ago_in_words(item.created_at) %> ago</p>
   <div class="admin">
     <%= link_to "Edit", edit_item_path(item) %>

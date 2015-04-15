@@ -1,6 +1,7 @@
 <%= form_for(@item) do |f| %>
    <div class="ui-widget">
-     <%= f.text_field :item, autofocus: true, :required => true %>
+     <%= f.text_field :item, autofocus: true, :required => true %><br>
+     Mark as done:<%= f.check_box :done %><br><br>
      <%= f.submit %>
   </div>
 <% end %>
